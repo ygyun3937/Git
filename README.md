@@ -19,3 +19,17 @@ git config --global user.email "yg@abc.com"
 ex) 빌드파일 등등..
 
 `.gitignore` 에 파일 확장자규칙이나 파일명, 폴더명을 명시하면 해당 소스는 변경사항에 포함되지 않는다.  
+
+
+## Default branch 를 바꿨을때
+ex) `main` -> `master`  
+  
+클론한 레포지토리 폴더 경로에서 아래 명령어로 브런치를 바꿔줘야 한다.  
+이 과정 없이 커밋을 날리면 기존 `main`브런치에서 작업하는게 되버려  
+커밋을 했을때 깃허브서버에 `main` 브런치가 하나 생성이 되어버리고 만다.  
+```bash
+git branch -m main master
+git fetch origin
+git branch -u origin/master master
+git remote set-head origin -a
+```
