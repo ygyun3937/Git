@@ -33,3 +33,26 @@ git fetch origin
 git branch -u origin/master master
 git remote set-head origin -a
 ```
+
+### Git 폴더 전체 업로드 방법
+```bash
+1. 업로드 폴더 상위로 이동
+2. git bash 클릭 (우클릭 하면 Git Bash Here)
+3. git remote add origin "업로드할 깃허브 repository 주소"
+4. git status
+5. git add .
+6. git commit -m "커밋 메시지"
+7. git remote -v
+8. git push origin "branch 이름"
+참고 링크 : https://vanillacreamdonut.tistory.com/193
+```
+
+### Git Error Message
+: failed to push some refs to에 대한 해결방법
+```bash
+1. 업데이트 진행 (fetch)
+git pull {원격저장소 별칭 보통은 origin} master
+2. Push
+결론 : 업데이트가 안된 상태로 Push 할려니 안되는거
+참고 링크 : https://lala9663.tistory.com/10
+```
