@@ -1,4 +1,4 @@
-# Git 주의사항
+# Git 관련 이것저것
 
 ## Configs
 ### local
